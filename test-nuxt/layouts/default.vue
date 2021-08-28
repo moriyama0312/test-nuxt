@@ -1,8 +1,19 @@
 <template>
-  <div>
-    <Nuxt />
-  </div>
+	<div>
+		<Header />
+		<Nuxt />
+	</div>
 </template>
+
+<script>
+import Header from '~/components/Header.vue';
+
+export default {
+	components: {
+		Header
+	}
+};
+</script>
 
 <style>
 html {
@@ -41,7 +52,7 @@ html {
 }
 
 .button--green:hover {
-	color: #fff;
+	color: #ffffff;
 	background-color: #3b8070;
 }
 
@@ -56,7 +67,7 @@ html {
 }
 
 .button--grey:hover {
-	color: #fff;
+	color: #ffffff;
 	background-color: #35495e;
 }
 </style>
