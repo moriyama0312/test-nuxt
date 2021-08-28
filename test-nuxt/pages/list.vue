@@ -16,18 +16,26 @@
 	</div>
 </template>
 <script>
+import {mapGetters} from 'vuex';
+
 export default {
 	head() {
 		return {
 			title: '投稿一覧 | Nuxt Practice'
 		}
 	},
-	async asyncData({ app }) {
+	async asyncData({ store }) {
 		console.log(`asyncData | server is ${process.server}`);
-		const items = await app.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js')
-		console.log(items);
+		if(store.getters.items.length) {
+			return;
+		}
 
-		return { items }
+		await store.dispatch('fetchItems');
+	},
+	computed: {
+		...mapGetters([
+			'items'
+		])
 	},
 	created() {
 		console.log(`created | server is ${process.server}`);
