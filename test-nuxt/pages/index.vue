@@ -6,11 +6,6 @@
         test-nuxt
       </h1>
       <div class="links">
-        <nuxt-link
-			to=""
-		>
-			Users
-		</nuxt-link>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"

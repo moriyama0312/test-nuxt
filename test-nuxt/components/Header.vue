@@ -3,6 +3,7 @@
 		<nuxt-link to="/">Top</nuxt-link>
 		<div class="menu">
 			<nuxt-link to="/list">リスト</nuxt-link>
+			<nuxt-link to="/login">ログイン</nuxt-link>
 		</div>
 	</header>
 </template>
