@@ -2,6 +2,8 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  srcDir: 'app',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-blog',
@@ -48,7 +50,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+	  baseURL: 'nuxt-blog-mm.firebaseapp.com'
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
